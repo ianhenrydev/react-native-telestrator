@@ -195,7 +195,7 @@ const VideoPlayer = forwardRef((props: IProps, ref) => {
             onValueChange={onTimeChange}
           />
           <TouchableOpacity style={{ width: 64, height: 64, alignItems: 'center', justifyContent: 'center' }} onPress={onSpeed}>
-            <Text style={{ fontSize: 18 }}>{`${speed}x`}</Text>
+            <Text style={{ fontSize: 18, color: theme.colors.text }}>{`${speed}x`}</Text>
           </TouchableOpacity>
         </View>
       </View>

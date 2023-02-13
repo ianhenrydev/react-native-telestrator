@@ -57,6 +57,7 @@ export default function ScreenshotModal(props: IProps) {
       },
       buttonText: {
         marginTop: 8,
+        color: theme.colors.text,
       },
     })
   }, [theme])
@@ -68,7 +69,7 @@ export default function ScreenshotModal(props: IProps) {
           <ScrollView style={styles.container}>
             <View style={{ padding: 16 }}>
               <View style={{ alignItems: 'flex-start', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <Text style={{ fontSize: 22 }}>New Screenshot</Text>
+                <Text style={{ fontSize: 22, color: theme.colors.text }}>New Screenshot</Text>
                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 32, width: 32 }} onPress={onClose}>
                   <Image style={{ tintColor: theme.colors.text, height: 24, width: 24 }} source={require('../../assets/x.png')} />
                 </TouchableOpacity>
@@ -77,7 +78,7 @@ export default function ScreenshotModal(props: IProps) {
                 <View style={{ flexDirection: 'row' }}>
                   <TouchableOpacity style={styles.button} onPress={onShare}>
                     <Image style={{ tintColor: theme.colors.text }} source={require('../../assets/share.png')} />
-                    <Text style={[styles.buttonText]}>Share</Text>
+                    <Text style={styles.buttonText}>Share</Text>
                   </TouchableOpacity>
                 </View>
               </View>

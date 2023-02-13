@@ -46,7 +46,7 @@ export default function ColorModal(props: IProps) {
     <Modal visible={visible} transparent={true} supportedOrientations={['landscape', 'portrait']}>
       <View style={styles.modal}>
         <View style={styles.container}>
-          <Text style={{ margin: 8, fontSize: 20 }}>Select Draw Color</Text>
+          <Text style={{ margin: 8, fontSize: 20, color: theme.colors.text }}>Select Draw Color</Text>
           <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
             {colorOptions.map((x) => (
               <TouchableOpacity key={x} style={[styles.color, { backgroundColor: x }]} onPress={() => onChooseColor(x)} />

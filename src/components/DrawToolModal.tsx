@@ -44,6 +44,7 @@ export default function DrawToolModal(props: IProps) {
         marginLeft: 12,
       },
       toolText: {
+        color: theme.colors.text,
         marginLeft: 8,
         fontSize: 16,
       },
@@ -54,7 +55,7 @@ export default function DrawToolModal(props: IProps) {
     <Modal visible={visible} transparent={true} supportedOrientations={['landscape', 'portrait']}>
       <View style={styles.modal}>
         <View style={styles.container}>
-          <Text style={{ margin: 8, fontSize: 20 }}>Select Draw Tool</Text>
+          <Text style={{ margin: 8, fontSize: 20, color: theme.colors.text }}>Select Draw Tool</Text>
           <View style={{ flexDirection: 'row' }}>
             <View style={{ flex: 1 }}>
               <TouchableOpacity style={styles.tool} onPress={() => onChooseTool(DrawTool.Pencil)}>
