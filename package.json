@@ -1,6 +1,13 @@
 {
   "name": "react-native-telestrator",
   "version": "0.0.1",
+  "description": "Video telestrator that allows for playback, canvas drawings, and screenshots.",
+  "keywords": [
+    "React Native",
+    "Telestration",
+    "Canvas",
+    "Motion analysis"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -8,6 +15,14 @@
   },
   "author": "Ian Henry",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianhenrydev/react-native-telestrator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianhenrydev/react-native-telestrator/issues"
+  },
+  "homepage": "https://github.com/ianhenrydev/react-native-telestrator",
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-native": ">= 0.64.3"
@@ -16,7 +31,7 @@
     "@types/react": "^18.0.26",
     "react": ">= 16.8.0",
     "react-native": ">= 0.64.3",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "@react-native-community/slider": "^4.4.2",
