@@ -338,13 +338,13 @@ export function Telestrator(props: IProps) {
           </View>
           <View style={{ flexDirection: 'row' }}>
             <TouchableOpacity style={styles.topButton} onPress={onGenerateThumbnails}>
-              <Image source={require('../ui/screenshot.png')} />
+              <Image source={require('../../assets/screenshot.png')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.topButton} onPress={onChooseVideo}>
               {!!splitscreenVideoSource ? <SinglescreenIcon /> : <SplitscreenIcon />}
             </TouchableOpacity>
             <TouchableOpacity style={styles.topButton} onPress={toggleResizeMode}>
-              <Image source={resizeMode === ResizeMode.CONTAIN ? require('../ui/fullscreen.png') : require('../ui/contain.png')} />
+              <Image source={resizeMode === ResizeMode.CONTAIN ? require('../../assets/fullscreen.png') : require('../../assets/contain.png')} />
             </TouchableOpacity>
           </View>
         </View>
@@ -401,7 +401,7 @@ export function Telestrator(props: IProps) {
                     }}
                   >
                     <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }} onPress={onPrev}>
-                      <Image source={require('../ui/minus.png')} />
+                      <Image source={require('../../assets/minus.png')} />
                     </TouchableOpacity>
                   </View>
                   <View
@@ -417,7 +417,7 @@ export function Telestrator(props: IProps) {
                     }}
                   >
                     <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }} onPress={onNext}>
-                      <Image source={require('../ui/plus.png')} />
+                      <Image source={require('../../assets/plus.png')} />
                     </TouchableOpacity>
                   </View>
                 </View>

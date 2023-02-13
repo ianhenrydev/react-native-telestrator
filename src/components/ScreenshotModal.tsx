@@ -70,13 +70,13 @@ export default function ScreenshotModal(props: IProps) {
               <View style={{ alignItems: 'flex-start', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontSize: 22 }}>New Screenshot</Text>
                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 32, width: 32 }} onPress={onClose}>
-                  <Image style={{ tintColor: theme.colors.text, height: 24, width: 24 }} source={require('../ui/x.png')} />
+                  <Image style={{ tintColor: theme.colors.text, height: 24, width: 24 }} source={require('../../assets/x.png')} />
                 </TouchableOpacity>
               </View>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <View style={{ flexDirection: 'row' }}>
                   <TouchableOpacity style={styles.button} onPress={onShare}>
-                    <Image style={{ tintColor: theme.colors.text }} source={require('../ui/share.png')} />
+                    <Image style={{ tintColor: theme.colors.text }} source={require('../../assets/share.png')} />
                     <Text style={[styles.buttonText]}>Share</Text>
                   </TouchableOpacity>
                 </View>
@@ -113,7 +113,7 @@ export default function ScreenshotModal(props: IProps) {
                         borderRadius: 4,
                       }}
                     >
-                      <Image style={{ width: 150, height: 31 }} source={require('../ui/chalktalk.png')} />
+                      <Image style={{ width: 150, height: 31 }} source={require('../../assets/chalktalk.png')} />
                     </View>
                   )}
                 </View>

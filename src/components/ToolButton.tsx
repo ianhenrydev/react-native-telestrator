@@ -49,7 +49,7 @@ export default function ToolButton(props: IProps) {
       case DrawTool.Line:
         return <LineIcon color={color} />
       case DrawTool.Pencil:
-        return <Image style={{ tintColor: color }} source={require('../ui/pencil.png')} />
+        return <Image style={{ tintColor: color }} source={require('../../assets/pencil.png')} />
       case DrawTool.Rectangle:
         return <RectangleIcon color={color} />
     }

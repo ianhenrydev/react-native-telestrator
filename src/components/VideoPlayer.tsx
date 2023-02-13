@@ -173,7 +173,7 @@ const VideoPlayer = forwardRef((props: IProps, ref) => {
           onLoad={onLoad}
           isMuted
           resizeMode={resizeMode}
-          posterSource={require('../ui/chalktalk.png')}
+          posterSource={require('../../assets/chalktalk.png')}
           onReadyForDisplay={onReadyForDisplay}
         />
       </View>
@@ -182,7 +182,7 @@ const VideoPlayer = forwardRef((props: IProps, ref) => {
           <TouchableOpacity style={styles.circleButton} onPress={onPlay}>
             <Image
               style={{ tintColor: theme.colors.text, height: 24, width: 24 }}
-              source={isPlaying ? require('../ui/pause.png') : require('../ui/play.png')}
+              source={isPlaying ? require('../../assets/pause.png') : require('../../assets/play.png')}
             />
           </TouchableOpacity>
           <Slider

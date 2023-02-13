@@ -58,7 +58,7 @@ export default function DrawToolModal(props: IProps) {
           <View style={{ flexDirection: 'row' }}>
             <View style={{ flex: 1 }}>
               <TouchableOpacity style={styles.tool} onPress={() => onChooseTool(DrawTool.Pencil)}>
-                <Image source={require('../ui/pencil.png')} />
+                <Image source={require('../../assets/pencil.png')} />
                 <Text style={styles.toolText}>Pencil</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.tool} onPress={() => onChooseTool(DrawTool.Rectangle)}>
