@@ -4,7 +4,7 @@
 
 Video telestrator that allows for playback, canvas drawings, and screenshots.
 
-![Example Screenshot](assets/example.png)
+![Example Screenshot](assets/example-screenshot.png)
 
 ## Installation
 
