@@ -173,7 +173,6 @@ const VideoPlayer = forwardRef((props: IProps, ref) => {
           onLoad={onLoad}
           isMuted
           resizeMode={resizeMode}
-          posterSource={require('../../assets/chalktalk.png')}
           onReadyForDisplay={onReadyForDisplay}
         />
       </View>

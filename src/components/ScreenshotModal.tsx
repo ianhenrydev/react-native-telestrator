@@ -101,21 +101,6 @@ export default function ScreenshotModal(props: IProps) {
                       </View>
                     </View>
                   )}
-                  {true && (
-                    <View
-                      style={{
-                        backgroundColor: 'rgba(0,0,0,0.1)',
-                        position: 'absolute',
-                        right: 6,
-                        bottom: 6,
-                        paddingVertical: 4,
-                        paddingHorizontal: 8,
-                        borderRadius: 4,
-                      }}
-                    >
-                      <Image style={{ width: 150, height: 31 }} source={require('../../assets/chalktalk.png')} />
-                    </View>
-                  )}
                 </View>
               </View>
             </View>

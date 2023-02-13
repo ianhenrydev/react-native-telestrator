@@ -1,6 +1,6 @@
 {
   "name": "react-native-telestrator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Video telestrator that allows for playback, canvas drawings, and screenshots.",
   "keywords": [
     "React Native",
