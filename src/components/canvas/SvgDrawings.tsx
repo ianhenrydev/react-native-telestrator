@@ -20,7 +20,7 @@ const CircleDrawing = (props: IDrawingProps) => {
   const xDiff = Math.abs(start.x - end.x)
   const yDiff = Math.abs(start.y - end.y)
   const r = xDiff + yDiff
-  return <Circle cx={start.x} cy={start.y} r={r} stroke={drawing.color} strokeWidth="2" />
+  return <Circle cx={start.x} cy={start.y} r={r} stroke={drawing.color} strokeWidth="2" fillOpacity={0} />
 }
 
 const RectangleDrawing = (props: IDrawingProps) => {
@@ -29,7 +29,7 @@ const RectangleDrawing = (props: IDrawingProps) => {
   const end = drawing.points.length > 1 ? drawing.points[1] : drawing.points[0]
   const width = end.x - start.x
   const height = end.y - start.y
-  return <Rect x={start.x} y={start.y} height={height} width={width} stroke={drawing.color} strokeWidth="2" />
+  return <Rect x={start.x} y={start.y} height={height} width={width} stroke={drawing.color} strokeWidth="2" fillOpacity={0} />
 }
 
 const LineDrawing = (props: IDrawingProps) => {
@@ -106,7 +106,7 @@ export default function SvgDrawings(props: ISvgDrawingsProps) {
   }
 
   return (
-    <Svg height="100%" width="100%" viewBox={`0 0 ${position.width} ${position.height}`}>
+    <Svg height="100%" width="100%" viewBox={`0 0 ${position.width} ${position.height}`} fillOpacity={0}>
       <Defs>
         <Marker id="arrowhead" markerWidth={10} markerHeight={7} refX={0} refY={3.5} orient="auto">
           <Polygon points="0 0, 10 3.5, 0 7" fill={'context-stroke'} />

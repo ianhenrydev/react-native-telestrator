@@ -1,5 +1,4 @@
 import { AVPlaybackSource, ResizeMode, VideoReadyForDisplayEvent } from 'expo-av'
-import * as ImagePicker from 'expo-image-picker'
 import * as VideoThumbnails from 'expo-video-thumbnails'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Image, LayoutChangeEvent, SafeAreaView, StatusBar, StyleSheet, TouchableOpacity, View } from 'react-native'
@@ -9,7 +8,7 @@ import SinglescreenIcon from '../svg/SinglescreenIcon'
 import SplitscreenIcon from '../svg/SplitscreenIcon'
 import TrashIcon from '../svg/TrashIcon'
 import { DrawTool, IDrawing, IPosition, ISizeProps, ITheme } from '../types'
-import { contain } from '../utils'
+import { contain, selectVideoFromGallery } from '../utils'
 import Canvas from './canvas/Canvas'
 import ColorModal from './ColorModal'
 import DrawToolModal from './DrawToolModal'
@@ -250,13 +249,9 @@ export function Telestrator(props: IProps) {
     if (!!splitscreenVideoSource) {
       setSplitscreenVideoSource(undefined)
     } else {
-      const result: any = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Videos,
-        quality: 1,
-        exif: true,
-      })
-      if (!result?.cancelled && !!result?.uri) {
-        setSplitscreenVideoSource({ uri: result.uri })
+      const result = await selectVideoFromGallery()
+      if (!!result) {
+        setSplitscreenVideoSource(result)
       }
     }
     setDrawings([])

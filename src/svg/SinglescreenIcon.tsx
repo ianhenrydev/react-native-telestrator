@@ -7,7 +7,7 @@ export default function SinglescreenIcon(props: SvgProps) {
   const width = 32
   return (
     <Svg height={height} width={width}>
-      <Rect x={0} y={0} width={width} height={height} stroke={color} strokeWidth={2} />
+      <Rect x={0} y={0} width={width} height={height} stroke={color} strokeWidth={2} fillOpacity={0} />
       <Text fill={color} fontSize="8" x={13} y={16}>
         A
       </Text>

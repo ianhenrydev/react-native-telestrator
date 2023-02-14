@@ -1,16 +1,19 @@
-import { useEffect, useRef } from 'react'
+import { AVPlaybackSource } from 'expo-av'
+import { launchImageLibraryAsync, MediaTypeOptions } from 'expo-image-picker'
 import { IPoint, ISizeProps } from './types'
 
-export const useDidUpdate = (callback: any, dependencies: any) => {
-  const didMount = useRef(false)
-
-  useEffect(() => {
-    if (didMount.current) {
-      callback()
-    } else {
-      didMount.current = true
-    }
-  }, [callback, dependencies])
+export async function selectVideoFromGallery() {
+  const result = await launchImageLibraryAsync({
+    mediaTypes: MediaTypeOptions.Videos,
+    quality: 1,
+    exif: true,
+  })
+  if (!!result?.assets?.length) {
+    const asset = result.assets[0]
+    const videoSource: AVPlaybackSource = { uri: asset.uri }
+    return videoSource
+  }
+  return undefined
 }
 
 export function findAngle(P2: IPoint, middle: IPoint, P3: IPoint, exterior?: boolean) {
