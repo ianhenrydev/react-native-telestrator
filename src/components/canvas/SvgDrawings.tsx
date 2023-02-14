@@ -58,7 +58,9 @@ const AngleDrawing = (props: IAngleDrawingProps) => {
   if (points.length === 1) {
     return <Circle cx={points[0].x} cy={points[0].y} r={4} fill={color} />
   } else if (points.length === 2) {
-    return <Path d={`M${points[0].x} ${points[0].y} L${points[1].x} ${points[1].y}`} stroke={color} strokeWidth="2" marker="url(#circleMarker)" />
+    return (
+      <Path d={`M${points[0].x} ${points[0].y} L${points[1].x} ${points[1].y}`} stroke={color} strokeWidth="2" marker="url(#circleMarker)" fillOpacity={0} />
+    )
   } else if (points.length === 3) {
     const angle = findAngle(points[0], points[1], points[2], exterior)
     const above = points[1].y > points[2].y
@@ -70,6 +72,7 @@ const AngleDrawing = (props: IAngleDrawingProps) => {
           stroke={color}
           strokeWidth="2"
           marker="url(#circleMarker)"
+          fillOpacity={0}
         />
       </>
     )
@@ -106,7 +109,7 @@ export default function SvgDrawings(props: ISvgDrawingsProps) {
   }
 
   return (
-    <Svg height="100%" width="100%" viewBox={`0 0 ${position.width} ${position.height}`} fillOpacity={0}>
+    <Svg height="100%" width="100%" viewBox={`0 0 ${position.width} ${position.height}`}>
       <Defs>
         <Marker id="arrowhead" markerWidth={10} markerHeight={7} refX={0} refY={3.5} orient="auto">
           <Polygon points="0 0, 10 3.5, 0 7" fill={'context-stroke'} />
