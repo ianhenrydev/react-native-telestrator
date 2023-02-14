@@ -338,13 +338,16 @@ export function Telestrator(props: IProps) {
           </View>
           <View style={{ flexDirection: 'row' }}>
             <TouchableOpacity style={styles.topButton} onPress={onGenerateThumbnails}>
-              <Image source={require('../../assets/screenshot.png')} />
+              <Image style={{ tintColor: theme.colors.text }} source={require('../../assets/screenshot.png')} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.topButton} onPress={onChooseVideo}>
-              {!!splitscreenVideoSource ? <SinglescreenIcon /> : <SplitscreenIcon />}
+              {!!splitscreenVideoSource ? <SinglescreenIcon color={theme.colors.text} /> : <SplitscreenIcon color={theme.colors.text} />}
             </TouchableOpacity>
             <TouchableOpacity style={styles.topButton} onPress={toggleResizeMode}>
-              <Image source={resizeMode === ResizeMode.CONTAIN ? require('../../assets/fullscreen.png') : require('../../assets/contain.png')} />
+              <Image
+                style={{ tintColor: theme.colors.text }}
+                source={resizeMode === ResizeMode.CONTAIN ? require('../../assets/fullscreen.png') : require('../../assets/contain.png')}
+              />
             </TouchableOpacity>
           </View>
         </View>
@@ -401,7 +404,7 @@ export function Telestrator(props: IProps) {
                     }}
                   >
                     <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }} onPress={onPrev}>
-                      <Image source={require('../../assets/minus.png')} />
+                      <Image style={{ tintColor: theme.colors.text }} source={require('../../assets/minus.png')} />
                     </TouchableOpacity>
                   </View>
                   <View
@@ -417,7 +420,7 @@ export function Telestrator(props: IProps) {
                     }}
                   >
                     <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%' }} onPress={onNext}>
-                      <Image source={require('../../assets/plus.png')} />
+                      <Image style={{ tintColor: theme.colors.text }} source={require('../../assets/plus.png')} />
                     </TouchableOpacity>
                   </View>
                 </View>
